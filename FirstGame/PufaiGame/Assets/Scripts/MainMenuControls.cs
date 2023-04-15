@@ -1,10 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using UnityEngine.UI;
 
 public class MainMenuControls : MonoBehaviour
-{   
+{
 
     public void Play()
     {
@@ -21,6 +19,17 @@ public class MainMenuControls : MonoBehaviour
         Application.Quit();
 
         Debug.Log("Exit pressed!");
+    }
+
+    public void FirstLevel()
+    {
+        var levelName = "FirstLevel";
+        Levels(levelName);
+    }
+
+    public void Levels(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 
     public void BackToMenu()
