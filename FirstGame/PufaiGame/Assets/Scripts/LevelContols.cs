@@ -7,6 +7,6 @@ public class LevelContols : MonoBehaviour
 
     // TODO: переключение на следующий текст
     public void NextText()
-    {
+    {   
     }
 }

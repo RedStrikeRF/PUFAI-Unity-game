@@ -18,7 +18,7 @@ public class MainMenuControls : MonoBehaviour
     {
         Application.Quit();
 
-        Debug.Log("Exit pressed!");
+        //Debug.Log("Exit pressed!");
     }
 
     public void FirstLevel()

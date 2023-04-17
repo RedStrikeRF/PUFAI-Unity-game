@@ -194,9 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exit
-
-'
+  m_Text: "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 \u0438\u0433\u0440\u044B\n"
 --- !u!222 &34898745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -242,8 +240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -682, y: -0.0000076293945}
-  m_SizeDelta: {x: 412.34, y: 121.761}
+  m_AnchoredPosition: {x: 0, y: -119}
+  m_SizeDelta: {x: 628.2383, y: 121.761}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114010334
 MonoBehaviour:
@@ -376,8 +374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -682, y: 350}
-  m_SizeDelta: {x: 412.34, y: 121.761}
+  m_AnchoredPosition: {x: 105, y: 336}
+  m_SizeDelta: {x: 1031.8745, y: 121.761}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040984139
 MonoBehaviour:
@@ -510,7 +508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -681.9995, y: 179}
+  m_AnchoredPosition: {x: 0, y: 188}
   m_SizeDelta: {x: 412.341, y: 121.761}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131529999
@@ -722,9 +720,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Settings
-
-'
+  m_Text: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438\n"
 --- !u!222 &1462610412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -956,9 +952,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Levels
-
-'
+  m_Text: "\u041D\u0430\u0447\u0430\u0442\u044C \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435\n"
 --- !u!222 &1708847465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1008,7 +1002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9964a2f20a672cc4e971398d94d4b683, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67f7d8323d45f60478bd98a1f31ac8d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
