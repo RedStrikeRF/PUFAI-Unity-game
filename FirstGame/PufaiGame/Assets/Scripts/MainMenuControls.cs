@@ -21,6 +21,24 @@ public class MainMenuControls : MonoBehaviour
         //Debug.Log("Exit pressed!");
     }
 
+    public void WelcomeText()
+    {
+        var levelName = "WelcomeText";
+        Levels(levelName);
+    }
+
+    public void VectorText()
+    {
+        var levelName = "VectorText";
+        Levels(levelName);
+    }
+
+    public void FirstTheory()
+    {
+        var sceneName = "FirstTheory";
+        Levels(sceneName);
+    }
+
     public void FirstLevel()
     {
         var levelName = "FirstLevel";
