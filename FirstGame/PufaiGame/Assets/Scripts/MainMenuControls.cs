@@ -17,8 +17,6 @@ public class MainMenuControls : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-
-        //Debug.Log("Exit pressed!");
     }
 
     public void WelcomeText()
