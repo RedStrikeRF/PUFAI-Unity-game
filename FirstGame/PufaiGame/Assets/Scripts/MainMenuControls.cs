@@ -43,6 +43,12 @@ public class MainMenuControls : MonoBehaviour
         Levels(levelName);
     }
 
+    public void SecondLevel()
+    {
+        var levelName = "SecondLevel";
+        Levels(levelName);
+    }
+
     public void Levels(string levelName)
     {
         SceneManager.LoadScene(levelName);

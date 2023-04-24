@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FirstTheory.unity
     guid: 654d13db1db8e634185bb08639cc5c55
   - enabled: 1
-    path: Assets/Scenes/FirstLevel.unity
+    path: Assets/Scenes/SecondLevel.unity
     guid: cffaecc4623890d45a30b71a65aa3eb3
+  - enabled: 1
+    path: Assets/Scenes/FirstLevel.unity
+    guid: 47a187db9cdc77a4d8c1f8bfd5910626
   m_configObjects: {}

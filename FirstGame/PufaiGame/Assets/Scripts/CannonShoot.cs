@@ -1,13 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using System;
-using System.Text;
-using UnityEngine.Rendering;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine;
 
 public class CannonShoot : MonoBehaviour
 {
@@ -17,7 +9,7 @@ public class CannonShoot : MonoBehaviour
     public TMP_InputField user;
 
     public void SetVector()
-    {   
+    {
         string XX = user.text;
         var coordinate = XX.Split(',');
         direction.x = float.Parse(coordinate[0]);
@@ -34,6 +26,6 @@ public class CannonShoot : MonoBehaviour
     void Update()
     {
         Debug.Log("gg");
-        transform.Translate(direction*speed);
+        transform.Translate(direction * speed);
     }
 }
