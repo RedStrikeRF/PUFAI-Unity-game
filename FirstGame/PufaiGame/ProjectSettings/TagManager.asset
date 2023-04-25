@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Play
   - Settings
+  - Button
   layers:
   - Default
   - TransparentFX

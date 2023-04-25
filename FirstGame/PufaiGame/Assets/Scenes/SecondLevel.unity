@@ -183,6 +183,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   speed: 3
   user: {fileID: 1466219044}
+  IsPressed: 0
+  buttonPressed: {fileID: 0}
 --- !u!1 &233847772
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +919,8 @@ MonoBehaviour:
   direction: {x: 0.03, y: 0}
   speed: 2
   user: {fileID: 1466219044}
+  IsPressed: 0
+  buttonPressed: {fileID: 0}
 --- !u!114 &1293819839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,7 +973,7 @@ GameObject:
   - component: {fileID: 1354154252}
   m_Layer: 5
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1041,7 +1045,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 130049683}
         m_TargetAssemblyTypeName: CannonShoot, Assembly-CSharp
-        m_MethodName: ButtonPress
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1632,7 +1636,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 130049683}
         m_TargetAssemblyTypeName: CannonShoot, Assembly-CSharp
-        m_MethodName: SetVector
+        m_MethodName: SetVectors
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
