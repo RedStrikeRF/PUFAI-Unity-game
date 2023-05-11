@@ -184,7 +184,6 @@ MonoBehaviour:
   speed: 3
   user: {fileID: 1466219044}
   IsPressed: 0
-  buttonPressed: {fileID: 0}
 --- !u!1 &233847772
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +919,6 @@ MonoBehaviour:
   speed: 2
   user: {fileID: 1466219044}
   IsPressed: 0
-  buttonPressed: {fileID: 0}
 --- !u!114 &1293819839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1744,11 +1742,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 54
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

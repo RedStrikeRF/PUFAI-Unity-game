@@ -37,10 +37,28 @@ public class MainMenuControls : MonoBehaviour
         Levels(sceneName);
     }
 
+    public void FirstLevelDescription()
+    {
+        var sceneName = "1LevelDescrip";
+        Levels(sceneName);
+    }
+
     public void FirstLevel()
     {
         var levelName = "FirstLevel";
         Levels(levelName);
+    }
+
+    public void SecondTheory()
+    {
+        var sceneName = "SecondTheory";
+        Levels(sceneName);
+    }
+
+    public void SecondLevelDescription()
+    {
+        var sceneName = "2LevelDescrip";
+        Levels(sceneName);
     }
 
     public void SecondLevel()
