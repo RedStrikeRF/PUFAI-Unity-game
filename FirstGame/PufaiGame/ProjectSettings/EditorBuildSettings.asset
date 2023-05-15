@@ -21,21 +21,21 @@ EditorBuildSettings:
     path: Assets/Scenes/VectorText.unity
     guid: 6dc61cc57e4abd4419bd8d2719295dc9
   - enabled: 1
-    path: Assets/Scenes/FirstTheory.unity
+    path: Assets/Scenes/1stLevel/FirstTheory.unity
     guid: 654d13db1db8e634185bb08639cc5c55
   - enabled: 1
-    path: Assets/Scenes/SecondLevel.unity
+    path: Assets/Scenes/2ndLevel/SecondLevel.unity
     guid: cffaecc4623890d45a30b71a65aa3eb3
   - enabled: 1
-    path: Assets/Scenes/FirstLevel.unity
+    path: Assets/Scenes/1stLevel/FirstLevel.unity
     guid: 47a187db9cdc77a4d8c1f8bfd5910626
   - enabled: 1
-    path: Assets/Scenes/1LevelDescrip.unity
+    path: Assets/Scenes/1stLevel/1LevelDescrip.unity
     guid: 3bd87f7839fa3bf429288e5332ef6200
   - enabled: 1
-    path: Assets/Scenes/SecondTheory.unity
+    path: Assets/Scenes/2ndLevel/SecondTheory.unity
     guid: 951d53e37b57927499e3e2fc3f120133
   - enabled: 1
-    path: Assets/Scenes/2LevelDescrip.unity
+    path: Assets/Scenes/2ndLevel/2LevelDescrip.unity
     guid: 175de3a17904a744da255d8e70beccfa
   m_configObjects: {}
