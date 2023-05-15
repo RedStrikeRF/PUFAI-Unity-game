@@ -4,17 +4,22 @@ using UnityEngine.UI;
 
 public class CannonShoot : MonoBehaviour
 {
-    public bool IsPressed;
+    public bool IsPressed = false;
     public Vector2 direction;
     public float speed = 3;
-    private int press = 0;
     public TMP_InputField user;
     public TextMeshProUGUI loseText;
     public Button startButton;
 
-    void Start()
+    void Update()
+    {   
+        transform.Translate(direction * speed);
+    }
+
+    public void Lose()
     {
-        IsPressed = false;
+        loseText.gameObject.SetActive(true);
+
     }
 
     public Vector2 SetVector()
@@ -30,30 +35,11 @@ public class CannonShoot : MonoBehaviour
         return direction;
     }
 
-    public void SetVectors()
-    {
-        Debug.Log(SetVector());
-    }
-
+    //здесь start
     public void ButtonPressed()
     {
-        startButton.onClick.Invoke();
         IsPressed = true;
-    }
-
-    public void GetTarget()
-    {
+        Debug.Log(SetVector());
         SetVector();
-        transform.Translate(direction * speed);
-    }
-
-    public void Lose()
-    {
-        loseText.gameObject.SetActive(true);
-    }
-
-    void Update()
-    {
-        GetTarget();
     }
 }
