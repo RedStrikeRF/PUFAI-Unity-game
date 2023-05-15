@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CannonShoot : MonoBehaviour
+public class ShipAdventure : MonoBehaviour
 {
     public bool IsPressed = false;
     public Vector2 direction;
