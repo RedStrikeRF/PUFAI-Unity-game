@@ -1,4 +1,3 @@
-using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,7 +25,6 @@ public class CannonShoot : MonoBehaviour
         direction.y = float.Parse(coordinate[1]);
         if (XX != "0,-1")
         {
-            Thread.Sleep(1000);
             Lose();
         }
         return direction;
@@ -39,10 +37,8 @@ public class CannonShoot : MonoBehaviour
 
     public void ButtonPressed()
     {
-        if (startButton.isActiveAndEnabled)
-        {
-            IsPressed = true;
-        }
+        startButton.onClick.Invoke();
+        IsPressed = true;
     }
 
     public void GetTarget()
@@ -58,6 +54,6 @@ public class CannonShoot : MonoBehaviour
 
     void Update()
     {
-        startButton.Invoke("GetTarget", 0);
+        GetTarget();
     }
 }
