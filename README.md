@@ -2,9 +2,6 @@
 First Game
 <div id="main" class="clearfix">
 
-                          <div class="region region-content">
-    <div id="block-system-main" class="block block-system clearfix">
-
     
   <div class="content">
     <div class="term-listing-heading"><div class="ds-2col-stacked taxonomy-term vocabulary-team view-mode-full clearfix">
