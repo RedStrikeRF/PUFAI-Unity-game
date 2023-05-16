@@ -2,17 +2,6 @@
 First Game
 <div id="main" class="clearfix">
 
-                                                <h1 class="title" style="font-size: 17px;" id="page-title">PUFAI</h1>                        
-                        <!-- #tabs -->
-                                                    <div class="tabs">
-                                                        </div>
-                                                <!-- EOF: #tabs -->
-
-                        
-                        <!-- #action links -->
-                                                <!-- EOF: #action links -->
-
-                         
                           <div class="region region-content">
     <div id="block-system-main" class="block block-system clearfix">
 
