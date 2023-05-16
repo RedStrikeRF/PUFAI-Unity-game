@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ShipAdventure : MonoBehaviour
@@ -40,16 +38,19 @@ public class ShipAdventure : MonoBehaviour
         }
         return shipDirection;
     }
+
     private void Lose()
     {
         restartButton.gameObject.SetActive(true);
         loseText.gameObject.SetActive(true);
     }
+
     private void Win()
     {
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
     }
+
     //здесь start
     public void ButtonPressed()
     {

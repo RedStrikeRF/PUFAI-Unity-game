@@ -1,49 +1,59 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PirateAttack : MonoBehaviour
 {
-    public bool IsPressed = false;
-    public Vector2 direction;
-    private int targetPosition = 250;
+    public InputField SetX;
+    public InputField SetY;
+    public Text loseText;
+    public Text winText;
+    public Button restartButton;
+    public Button nextLevel;
+
+    private bool IsPressed;
+    private Vector2 direction;
+    private int minY = 60;
     private int maxY = 950;
     private int minX = 550;
-    private int maxX = 1650;
+    private int targetPos = 1780;
     private float speed = 3;
-    private static int waitSeconds = 100;
-    public WaitForSeconds wait;
-    public TMP_InputField user;
-    public TextMeshProUGUI loseText;
-    public Button startButton;
 
     void Update()
     {
-        if (transform.position.y >= targetPosition && transform.position.y <= maxY
-            && transform.position.x >= minX && transform.position.x <= maxX)
+        if (transform.position.y >= minY && transform.position.y <= maxY
+            && transform.position.x >= minX && transform.position.x <= targetPos)
             transform.Translate(direction * speed);
     }
 
-    public void Lose()
-    {
-        loseText.gameObject.SetActive(true);
-        SceneManager.LoadScene("SecondLevel");
-    }
+
 
     public Vector2 SetVector()
     {
-        string XX = user.text;
-        var coordinate = XX.Split(',');
-        direction.x = float.Parse(coordinate[0]);
-        direction.y = float.Parse(coordinate[1]);
-        if (XX != "-3,3")
+        direction.x = float.Parse(SetX.text);
+        direction.y = float.Parse(SetY.text);
+        if (direction.x != -3 || direction.y != 3)
         {
             Lose();
+        }
+        else
+        {
+            Win();
         }
         direction.x += 6;
         direction.y -= 3;
         return direction;
+    }
+
+    private void Lose()
+    {
+        restartButton.gameObject.SetActive(true);
+        loseText.gameObject.SetActive(true);
+    }
+
+    private void Win()
+    {
+        nextLevel.gameObject.SetActive(true);
+        winText.gameObject.SetActive(true);
     }
 
     //здесь start
@@ -52,11 +62,5 @@ public class PirateAttack : MonoBehaviour
         IsPressed = true;
         Debug.Log(SetVector());
         SetVector();
-    }
-
-    private WaitForSeconds Wait()
-    {
-        wait = new WaitForSeconds(waitSeconds);
-        return wait;
     }
 }
