@@ -5,56 +5,55 @@ using UnityEngine.UI;
 
 public class ShipAdventure : MonoBehaviour
 {
-    public bool IsPressed = false;
-    public Vector2 direction;
-    private int targetPosition = 250;
-    private int maxY = 950;
-    private int minX = 550;
-    private int maxX = 1650;
-    private float speed = 3;
-    private static int waitSeconds = 100;
-    public WaitForSeconds wait;
-    public TMP_InputField user;
-    public TextMeshProUGUI loseText;
-    public Button startButton;
+    public InputField SetX;
+    public InputField SetY;
+    public Text loseText;
+    public Text winText;
+    public Button restartButton;
+    public Button nextLevel;
+
+    private readonly int targetPosition = 250;
+    private readonly int maxY = 950;
+    private readonly int minX = 550;
+    private readonly int maxX = 1650;
+    private readonly float speed = 3;
+    private Vector2 shipDirection;
 
     void Update()
     {
         if (transform.position.y >= targetPosition && transform.position.y <= maxY
             && transform.position.x >= minX && transform.position.x <= maxX)
-            transform.Translate(direction * speed);
+            transform.Translate(shipDirection * speed);
     }
 
-    public void Lose()
+    private Vector2 SetVectors()
     {
-        loseText.gameObject.SetActive(true);
-        SceneManager.LoadScene("FirstLevel");
-    }
-
-    public Vector2 SetVector()
-    {
-        string XX = user.text;
-        var coordinate = XX.Split(',');
-        direction.x = float.Parse(coordinate[0]);
-        direction.y = float.Parse(coordinate[1]);
-        if (XX != "0,-1")
+        shipDirection.x = float.Parse(SetX.text);
+        shipDirection.y = float.Parse(SetY.text);
+        if (shipDirection.x != 0 || shipDirection.y != -1)
         {
             Lose();
         }
-        return direction;
+        else
+        {
+            Win();
+        }
+        return shipDirection;
     }
-
+    private void Lose()
+    {
+        restartButton.gameObject.SetActive(true);
+        loseText.gameObject.SetActive(true);
+    }
+    private void Win()
+    {
+        nextLevel.gameObject.SetActive(true);
+        winText.gameObject.SetActive(true);
+    }
     //здесь start
     public void ButtonPressed()
     {
-        IsPressed = true;
-        Debug.Log(SetVector());
-        SetVector();
-    }
-
-    private WaitForSeconds Wait()
-    {
-        wait = new WaitForSeconds(waitSeconds);
-        return wait;
+        Debug.Log(SetVectors());
+        SetVectors();
     }
 }
