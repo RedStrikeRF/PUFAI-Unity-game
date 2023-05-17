@@ -68,7 +68,8 @@ public class MainMenuControls : MonoBehaviour
     }
 
     public void Levels(string levelName)
-    {
+    {   
+        Debug.Log(levelName);
         SceneManager.LoadScene(levelName);
     }
 

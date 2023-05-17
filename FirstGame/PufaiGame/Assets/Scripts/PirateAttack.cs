@@ -9,6 +9,7 @@ public class PirateAttack : MonoBehaviour
     public Text winText;
     public Button restartButton;
     public Button nextLevel;
+    public Image cannonBall;
 
     private bool IsPressed;
     private Vector2 direction;
@@ -58,7 +59,8 @@ public class PirateAttack : MonoBehaviour
 
     //здесь start
     public void ButtonPressed()
-    {
+    {   
+        cannonBall.gameObject.SetActive(true);
         IsPressed = true;
         Debug.Log(SetVector());
         SetVector();
