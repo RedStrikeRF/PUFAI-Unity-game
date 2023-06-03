@@ -17,6 +17,8 @@ public class ShipAdventure : MonoBehaviour
     private readonly float speed = 3;
     private Vector2 shipDirection;
 
+    public bool IsDone { get; set; }
+
     void Update()
     {
         if (transform.position.y >= targetPosition && transform.position.y <= maxY
@@ -45,10 +47,12 @@ public class ShipAdventure : MonoBehaviour
         loseText.gameObject.SetActive(true);
     }
 
-    private void Win()
+    public bool Win()
     {
+        IsDone = true;
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
+        return IsDone;
     }
 
     //здесь start

@@ -38,4 +38,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WelcomeText.unity
     guid: c10b76a777d6ba34a81146e3a9770349
+  - enabled: 1
+    path: Assets/Scenes/3rdLevel/ThirdLevel.unity
+    guid: 202fc4aca74800a4d9fa3003ac7578c3
+  - enabled: 1
+    path: Assets/Scenes/3rdLevel/3LevelDescrip.unity
+    guid: 3acd459db0f0b5c41ac1d6f9870d2a7f
+  - enabled: 1
+    path: Assets/Scenes/3rdLevel/ThirdTheory1.unity
+    guid: f4c994a8cfc2d7b458ff359cba4b229d
+  - enabled: 1
+    path: Assets/Scenes/3rdLevel/ThirdTheory2.unity
+    guid: ccaf94d4a22bc2c4f80751075fedf455
   m_configObjects: {}

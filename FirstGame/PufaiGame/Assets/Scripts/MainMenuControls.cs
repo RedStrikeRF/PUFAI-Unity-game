@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControls : MonoBehaviour
 {
-
     public void Play()
     {
         SceneManager.LoadScene("Levels");
@@ -67,8 +66,32 @@ public class MainMenuControls : MonoBehaviour
         Levels(levelName);
     }
 
+    public void ThirdTheory1()
+    {
+        var levelName = "ThirdTheory1";
+        Levels(levelName);
+    }
+
+    public void ThirdTheory2()
+    {
+        var levelName = "ThirdTheory2";
+        Levels(levelName);
+    }
+
+    public void ThirdLevelDescription()
+    {
+        var levelName = "3LevelDescrip";
+        Levels(levelName);
+    }
+
+    public void ThirdLevel()
+    {
+        var levelName = "ThirdLevel";
+        Levels(levelName);
+    }
+
     public void Levels(string levelName)
-    {   
+    {
         Debug.Log(levelName);
         SceneManager.LoadScene(levelName);
     }
@@ -86,7 +109,6 @@ public class MainMenuControls : MonoBehaviour
         //fullscreen;
         Screen.fullScreen = !Screen.fullScreen;
     }
-
 
     //надо сделать настройку громкости музыки через slider "volume"
     //public GameSettings am;
