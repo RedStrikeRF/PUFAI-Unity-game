@@ -5,6 +5,7 @@ public class PirateAttack : MonoBehaviour
 {
     public InputField SetX;
     public InputField SetY;
+    public Text errorText;
     public Text loseText;
     public Text winText;
     public Button restartButton;
@@ -16,7 +17,7 @@ public class PirateAttack : MonoBehaviour
     private int minY = 60;
     private int maxY = 950;
     private int minX = 550;
-    private int targetPos = 1780;
+    private int targetPos = 1470;
     private float speed = 3;
 
     void Update()
@@ -30,19 +31,28 @@ public class PirateAttack : MonoBehaviour
 
     public Vector2 SetVector()
     {
-        direction.x = float.Parse(SetX.text);
-        direction.y = float.Parse(SetY.text);
-        if (direction.x != -3 || direction.y != 3)
+        try
         {
-            Lose();
+            direction.x = float.Parse(SetX.text);
+            direction.y = float.Parse(SetY.text);
+            if (direction.x != -3 || direction.y != 3)
+            {
+                Lose();
+            }
+            else
+            {
+                Win();
+            }
+            direction.x += 6;
+            direction.y -= 3;
+            return direction;
         }
-        else
+        catch
         {
-            Win();
+            errorText.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+            return new Vector2(0, 0);
         }
-        direction.x += 6;
-        direction.y -= 3;
-        return direction;
     }
 
     private void Lose()
@@ -59,7 +69,7 @@ public class PirateAttack : MonoBehaviour
 
     //здесь start
     public void ButtonPressed()
-    {   
+    {
         cannonBall.gameObject.SetActive(true);
         IsPressed = true;
         Debug.Log(SetVector());

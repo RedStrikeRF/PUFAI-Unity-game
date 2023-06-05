@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShipAdventure : MonoBehaviour
+public class IslandAdventure : MonoBehaviour
 {
-    public InputField SetX;
-    public InputField SetY;
+    public InputField setCoordinate;
     public Text errorText;
     public Text loseText;
     public Text winText;
@@ -16,23 +15,23 @@ public class ShipAdventure : MonoBehaviour
     private readonly int minX = 550;
     private readonly int maxX = 1650;
     private readonly float speed = 3;
-    private Vector2 shipDirection;
-    public static bool isDone;
+    private Vector2 parrotDirection;
+    public bool isDone;
 
     void Update()
     {
         if (transform.position.y >= targetPosition && transform.position.y <= maxY
             && transform.position.x >= minX && transform.position.x <= maxX)
-            transform.Translate(shipDirection * speed);
+            transform.Translate(parrotDirection * speed);
     }
 
     private Vector2 SetVectors()
     {
         try
         {
-            shipDirection.x = float.Parse(SetX.text);
-            shipDirection.y = float.Parse(SetY.text);
-            if (shipDirection.x != 0 || shipDirection.y != -1)
+            parrotDirection.x = float.Parse(setCoordinate.text);
+            //shipDirection.y = float.Parse(SetY.text);
+            if (parrotDirection.x != 0 || parrotDirection.y != -1)
             {
                 Lose();
             }
@@ -40,7 +39,7 @@ public class ShipAdventure : MonoBehaviour
             {
                 Win();
             }
-            return shipDirection;
+            return parrotDirection;
         }
         catch
         {
@@ -48,7 +47,6 @@ public class ShipAdventure : MonoBehaviour
             restartButton.gameObject.SetActive(true);
             return new Vector2(0, 0);
         }
-
     }
 
     private void Lose()
