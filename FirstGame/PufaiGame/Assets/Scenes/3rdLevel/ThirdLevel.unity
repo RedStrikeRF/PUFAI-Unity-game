@@ -2273,7 +2273,7 @@ GameObject:
   - component: {fileID: 1839964821}
   - component: {fileID: 1839964820}
   - component: {fileID: 1839964819}
-  - component: {fileID: 1839964818}
+  - component: {fileID: 1839964822}
   m_Layer: 5
   m_Name: ball
   m_TagString: Player
@@ -2301,26 +2301,6 @@ RectTransform:
   m_AnchoredPosition: {x: 726, y: 322}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1839964818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839964816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02e15255882765343b69494a4d336554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SetX: {fileID: 0}
-  SetY: {fileID: 0}
-  errorText: {fileID: 0}
-  loseText: {fileID: 0}
-  winText: {fileID: 0}
-  restartButton: {fileID: 0}
-  nextLevel: {fileID: 0}
-  cannonBall: {fileID: 1839964819}
 --- !u!114 &1839964819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,6 +2391,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1839964822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839964816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55efa5181f4701543b56ad91e8719f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setCoordinate: {fileID: 266865316}
+  errorText: {fileID: 1082965525}
+  loseText: {fileID: 797574808}
+  winText: {fileID: 320099497}
+  restartButton: {fileID: 448272017}
+  nextLevel: {fileID: 1803199458}
+  isDone: 0
 --- !u!1 &2007729632
 GameObject:
   m_ObjectHideFlags: 0
