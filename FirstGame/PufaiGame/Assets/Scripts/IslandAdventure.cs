@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,9 +31,11 @@ public class IslandAdventure : MonoBehaviour
     {
         try
         {
-            parrotDirection.x = float.Parse(setCoordinate.text);
-            //shipDirection.y = float.Parse(SetY.text);
-            if (parrotDirection.x != 0 || parrotDirection.y != -1)
+            // Сделать так, чтобы сплит работал
+            var input = setCoordinate.ToString().Split('(').ToArray();
+            parrotDirection.x = float.Parse(input[0]) * (float)Math.Cos(3 * Math.PI / 2);
+            parrotDirection.y = float.Parse(input[0]) * (float)Math.Sin(3 * Math.PI / 2);
+            if (parrotDirection.x != 4 * Math.Cos(3 * Math.PI / 2) || parrotDirection.y != 4 * Math.Sin(3 * Math.PI / 2))
             {
                 Lose();
             }
