@@ -1,41 +1,48 @@
-using System;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class IslandAdventure : MonoBehaviour
 {
-    public InputField setCoordinate;
+    public InputField input;
     public Text errorText;
     public Text loseText;
     public Text winText;
     public Button restartButton;
     public Button nextLevel;
+    public Image cannonBall;
 
-    private readonly int targetPosition = 250;
-    private readonly int maxY = 950;
-    private readonly int minX = 550;
-    private readonly int maxX = 1650;
-    private readonly float speed = 3;
-    private Vector2 parrotDirection;
-    public bool isDone;
+    private Vector2 direction;
+    private int minY = 60;
+    private int maxY = 950;
+    private int maxX = 1250;
+    private int targetPos = 350;
+    private float speed = 3;
 
     void Update()
     {
-        if (transform.position.y >= targetPosition && transform.position.y <= maxY
-            && transform.position.x >= minX && transform.position.x <= maxX)
-            transform.Translate(parrotDirection * speed);
+        if (transform.position.y >= minY && transform.position.y <= maxY
+            && transform.position.x >= targetPos && transform.position.x <= maxX)
+            transform.Translate(direction * speed);
     }
 
-    private Vector2 SetVectors()
+
+
+    public Vector2 SetVector()
     {
         try
         {
-            // Сделать так, чтобы сплит работал
-            var input = setCoordinate.ToString().Split('(').ToArray();
-            parrotDirection.x = float.Parse(input[0]) * (float)Math.Cos(3 * Math.PI / 2);
-            parrotDirection.y = float.Parse(input[0]) * (float)Math.Sin(3 * Math.PI / 2);
-            if (parrotDirection.x != 4 * Math.Cos(3 * Math.PI / 2) || parrotDirection.y != 4 * Math.Sin(3 * Math.PI / 2))
+            var text = input.text;
+            var put = text.Split(new char[] { '(', ')', ' ' });
+            Debug.Log(put);
+            direction.x = float.Parse(put[0]) * 0;
+            direction.y = float.Parse(put[0]) * (-1);
+            if (put[1] != "cos3pi/2+isin3pi/2")
+            {
+                errorText.gameObject.SetActive(true);
+                restartButton.gameObject.SetActive(true);
+                return new Vector2(0, 0);
+            }
+            if (direction.x != 0 || direction.y != -4)
             {
                 Lose();
             }
@@ -43,7 +50,9 @@ public class IslandAdventure : MonoBehaviour
             {
                 Win();
             }
-            return parrotDirection;
+            direction.x -= 4;
+            direction.y += 5;
+            return direction;
         }
         catch
         {
@@ -59,18 +68,16 @@ public class IslandAdventure : MonoBehaviour
         loseText.gameObject.SetActive(true);
     }
 
-    public bool Win()
+    private void Win()
     {
-        isDone = true;
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
-        return isDone;
     }
 
     //здесь start
     public void ButtonPressed()
     {
-        Debug.Log(SetVectors());
-        SetVectors();
+        Debug.Log(SetVector());
+        SetVector();
     }
 }

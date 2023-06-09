@@ -12,7 +12,6 @@ public class PirateAttack : MonoBehaviour
     public Button nextLevel;
     public Image cannonBall;
 
-    private bool IsPressed;
     private Vector2 direction;
     private int minY = 60;
     private int maxY = 950;
@@ -71,7 +70,6 @@ public class PirateAttack : MonoBehaviour
     public void ButtonPressed()
     {
         cannonBall.gameObject.SetActive(true);
-        IsPressed = true;
         Debug.Log(SetVector());
         SetVector();
     }
