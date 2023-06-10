@@ -93,6 +93,24 @@ public class MainMenuControls : MonoBehaviour
         Levels(levelName);
     }
 
+    public void ForthTheory()
+    {
+        var levelName = "ForthTheory";
+        Levels(levelName);
+    }
+
+    public void ForthLevelDescription()
+    {
+        var levelName = "4LevelDescrip";
+        Levels(levelName);
+    }
+
+    public void ForthLevel()
+    {
+        var levelName = "ForthLevel";
+        Levels(levelName);
+    }
+
     public void Levels(string levelName)
     {
         Debug.Log(levelName);

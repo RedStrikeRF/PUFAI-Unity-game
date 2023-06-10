@@ -9,6 +9,7 @@ public class ForthLevel : MonoBehaviour
     public Text winText;
     public Button restartButton;
     public Button nextLevel;
+    public Image target1, target2, target3, target4;
 
     private string z1, z2, z3, z4;
 
@@ -19,7 +20,7 @@ public class ForthLevel : MonoBehaviour
 
 
 
-    public string SetVector()
+    public string SetNumbers()
     {
         try
         {
@@ -27,16 +28,38 @@ public class ForthLevel : MonoBehaviour
             z2 = Set2.text;
             z3 = Set3.text;
             z4 = Set4.text;
-            if ((z1 != "1" || z1 != "-1" || z1 != "i" || z1 != "-i")
-                && (z2 != "1" || z2 != "-1" || z2 != "i" || z2 != "-i")
-                && (z3 != "1" || z3 != "-1" || z3 != "i" || z3 != "-i")
-                && (z4 != "1" || z4 != "-1" || z4 != "i" || z4 != "-i"))
+            // Возможно это можно сократить
+            switch (z1)
             {
-                Lose();
-            }
-            else
-            {
-                Win();
+                case "1" when z2 == "-1" && z3 == "i" && z4 == "-i":
+                case "1" when z2 == "-1" && z3 == "-i" && z4 == "i":
+                case "1" when z2 == "i" && z3 == "-1" && z4 == "-i":
+                case "1" when z2 == "i" && z3 == "-i" && z4 == "-1":
+                case "1" when z2 == "-i" && z3 == "i" && z4 == "-1":
+                case "1" when z2 == "-i" && z3 == "-1" && z4 == "i":
+                case "-1" when z2 == "1" && z3 == "i" && z4 == "-i":
+                case "-1" when z2 == "1" && z3 == "-i" && z4 == "i":
+                case "-1" when z2 == "i" && z3 == "1" && z4 == "-i":
+                case "-1" when z2 == "i" && z3 == "-i" && z4 == "1":
+                case "-1" when z2 == "-i" && z3 == "i" && z4 == "1":
+                case "-1" when z2 == "-i" && z3 == "1" && z4 == "i":
+                case "i" when z2 == "-1" && z3 == "1" && z4 == "-i":
+                case "i" when z2 == "-1" && z3 == "-i" && z4 == "1":
+                case "i" when z2 == "1" && z3 == "-1" && z4 == "-i":
+                case "i" when z2 == "1" && z3 == "-i" && z4 == "-1":
+                case "i" when z2 == "-i" && z3 == "1" && z4 == "-1":
+                case "i" when z2 == "-i" && z3 == "-1" && z4 == "1":
+                case "-i" when z2 == "-1" && z3 == "1" && z4 == "i":
+                case "-i" when z2 == "-1" && z3 == "i" && z4 == "1":
+                case "-i" when z2 == "1" && z3 == "-1" && z4 == "i":
+                case "-i" when z2 == "1" && z3 == "i" && z4 == "-1":
+                case "-i" when z2 == "i" && z3 == "1" && z4 == "-1":
+                case "-i" when z2 == "i" && z3 == "-1" && z4 == "1":
+                    Win();
+                    break;
+                default:
+                    Lose();
+                    break;
             }
             return z1;
         }
@@ -56,6 +79,10 @@ public class ForthLevel : MonoBehaviour
 
     private void Win()
     {
+        target1.gameObject.SetActive(true);
+        target2.gameObject.SetActive(true);
+        target3.gameObject.SetActive(true);
+        target4.gameObject.SetActive(true);
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
     }
@@ -63,7 +90,7 @@ public class ForthLevel : MonoBehaviour
     //здесь start
     public void ButtonPressed()
     {
-        Debug.Log(SetVector());
-        SetVector();
+        Debug.Log(SetNumbers());
+        SetNumbers();
     }
 }
