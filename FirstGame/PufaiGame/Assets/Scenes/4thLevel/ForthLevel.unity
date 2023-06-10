@@ -664,7 +664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &489555286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1625,7 +1625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &909277533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2596,7 +2596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1262989929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2948,6 +2948,10 @@ MonoBehaviour:
   winText: {fileID: 960461221}
   restartButton: {fileID: 1843540202}
   nextLevel: {fileID: 623033621}
+  target1: {fileID: 489555287}
+  target2: {fileID: 909277534}
+  target3: {fileID: 1262989930}
+  target4: {fileID: 1994259601}
 --- !u!1 &1708106265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,7 +3267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1994259600
 RectTransform:
   m_ObjectHideFlags: 0
