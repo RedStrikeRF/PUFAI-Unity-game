@@ -59,4 +59,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4thLevel/ForthTheory.unity
     guid: 0c3b40651deeaa34e9c88ab903f36f34
+  - enabled: 1
+    path: Assets/Scenes/5thLevel/5LevelDescrip.unity
+    guid: 2e48d5ad6e135694196f99905383dfd9
+  - enabled: 1
+    path: Assets/Scenes/5thLevel/FifthLevel.unity
+    guid: 318952c69088af145ba7f93b0d1292c0
+  - enabled: 1
+    path: Assets/Scenes/5thLevel/FIfthTheory.unity
+    guid: 42401c384592f664b89db8f8ffef8522
   m_configObjects: {}

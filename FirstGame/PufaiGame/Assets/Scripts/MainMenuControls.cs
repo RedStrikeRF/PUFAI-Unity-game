@@ -111,6 +111,24 @@ public class MainMenuControls : MonoBehaviour
         Levels(levelName);
     }
 
+    public void FifthTheory()
+    {
+        var levelName = "FifthTheory";
+        Levels(levelName);
+    }
+
+    public void FifthLevelDescription()
+    {
+        var levelName = "5LevelDescrip";
+        Levels(levelName);
+    }
+
+    public void FifthLevel()
+    {
+        var levelName = "FifthLevel";
+        Levels(levelName);
+    }
+
     public void Levels(string levelName)
     {
         Debug.Log(levelName);
