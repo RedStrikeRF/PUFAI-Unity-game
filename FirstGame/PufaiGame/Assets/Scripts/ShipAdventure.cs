@@ -10,6 +10,7 @@ public class ShipAdventure : MonoBehaviour
     public Text winText;
     public Button restartButton;
     public Button nextLevel;
+    public MainMenuControls menuControls;
 
     private readonly int targetPosition = 250;
     private readonly int maxY = 950;
@@ -17,7 +18,7 @@ public class ShipAdventure : MonoBehaviour
     private readonly int maxX = 1650;
     private readonly float speed = 3;
     private Vector2 shipDirection;
-    public static bool isDone;
+    public bool isDone = false;
 
     void Update()
     {
@@ -62,6 +63,7 @@ public class ShipAdventure : MonoBehaviour
         isDone = true;
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
+        menuControls.button.SetActive(true);
         return isDone;
     }
 

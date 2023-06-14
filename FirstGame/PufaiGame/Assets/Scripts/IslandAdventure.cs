@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class IslandAdventure : MonoBehaviour
 {
-    public InputField input;
+    public InputField set;
     public Text errorText;
     public Text loseText;
     public Text winText;
@@ -31,12 +31,12 @@ public class IslandAdventure : MonoBehaviour
     {
         try
         {
-            var text = input.text;
-            var put = text.Split(new char[] { '(', ')', ' ' });
-            Debug.Log(put);
-            direction.x = float.Parse(put[0]) * 0;
-            direction.y = float.Parse(put[0]) * (-1);
-            if (put[1] != "cos3pi/2+isin3pi/2")
+            var text = set.text;
+            var input = text.Split(new char[] { '(', ')', ' ', '3', '+' });
+            Debug.Log(input);
+            direction.x = float.Parse(input[0]) * 0;
+            direction.y = float.Parse(input[0]) * -1;
+            if (input[1] != "cos" || input[3] != "isin")
             {
                 errorText.gameObject.SetActive(true);
                 restartButton.gameObject.SetActive(true);

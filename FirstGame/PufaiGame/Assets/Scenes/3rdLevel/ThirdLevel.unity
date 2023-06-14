@@ -952,6 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ce8417e2f0299419f114ee47260296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipAdventure: {fileID: 0}
   button: {fileID: 0}
 --- !u!224 &821920760
 RectTransform:
@@ -985,7 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55efa5181f4701543b56ad91e8719f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 0}
+  set: {fileID: 0}
   errorText: {fileID: 0}
   loseText: {fileID: 0}
   winText: {fileID: 0}
@@ -2297,8 +2298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1100, y: 420}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 1033, y: 470}
+  m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1839964819
 MonoBehaviour:
@@ -2402,7 +2403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55efa5181f4701543b56ad91e8719f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 266865316}
+  set: {fileID: 0}
   errorText: {fileID: 1082965525}
   loseText: {fileID: 797574808}
   winText: {fileID: 320099497}

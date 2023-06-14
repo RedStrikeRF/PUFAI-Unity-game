@@ -1616,6 +1616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ce8417e2f0299419f114ee47260296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipAdventure: {fileID: 0}
   button: {fileID: 144575629}
 --- !u!1 &1959218045
 GameObject:

@@ -20,7 +20,6 @@ public class ChestLevel : MonoBehaviour
         try
         {
             var text = input.text;
-            Debug.Log(Mathf.Sin(3 * Mathf.PI / 2));
             if (text != "cos3pi/2+isin3pi/2")
             {
                 Lose();

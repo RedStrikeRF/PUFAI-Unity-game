@@ -3,8 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControls : MonoBehaviour
 {
-    private ShipAdventure shipAdventure;
-    public GameObject button;
+    public void Update()
+    {
+
+    }
 
     public void Play()
     {
@@ -133,8 +135,6 @@ public class MainMenuControls : MonoBehaviour
     {
         Debug.Log(levelName);
         SceneManager.LoadScene(levelName);
-        if (shipAdventure.Win())
-            button.gameObject.SetActive(true);
     }
 
     public void BackToMenu()
