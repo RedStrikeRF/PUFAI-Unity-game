@@ -131,6 +131,11 @@ public class MainMenuControls : MonoBehaviour
         Levels(levelName);
     }
 
+    public void Final()
+    {
+        SceneManager.LoadScene("Final");
+    }
+
     public void Levels(string levelName)
     {
         Debug.Log(levelName);

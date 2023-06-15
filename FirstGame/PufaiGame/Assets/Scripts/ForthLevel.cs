@@ -10,15 +10,10 @@ public class ForthLevel : MonoBehaviour
     public Button restartButton;
     public Button nextLevel;
     public Image target1, target2, target3, target4;
+    public AudioSource sound;
+    public AudioClip indians;
 
     private string z1, z2, z3, z4;
-
-    void Update()
-    {
-
-    }
-
-
 
     public string SetNumbers()
     {
@@ -83,6 +78,7 @@ public class ForthLevel : MonoBehaviour
         target2.gameObject.SetActive(true);
         target3.gameObject.SetActive(true);
         target4.gameObject.SetActive(true);
+        sound.PlayOneShot(indians);
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
     }

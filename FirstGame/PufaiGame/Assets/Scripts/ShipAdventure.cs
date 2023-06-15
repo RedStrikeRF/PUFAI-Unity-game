@@ -10,7 +10,8 @@ public class ShipAdventure : MonoBehaviour
     public Text winText;
     public Button restartButton;
     public Button nextLevel;
-    public MainMenuControls menuControls;
+    public AudioSource sound;
+    public AudioClip shipMove;
 
     private readonly int targetPosition = 250;
     private readonly int maxY = 950;
@@ -19,6 +20,11 @@ public class ShipAdventure : MonoBehaviour
     private readonly float speed = 3;
     private Vector2 shipDirection;
     public bool isDone = false;
+
+    private void Start()
+    {
+        sound = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -70,6 +76,7 @@ public class ShipAdventure : MonoBehaviour
     public void ButtonPressed()
     {
         Debug.Log(SetVectors());
+        sound.PlayOneShot(shipMove);
         SetVectors();
     }
 }

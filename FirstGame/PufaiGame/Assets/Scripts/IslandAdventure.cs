@@ -9,7 +9,10 @@ public class IslandAdventure : MonoBehaviour
     public Text winText;
     public Button restartButton;
     public Button nextLevel;
-    public Image cannonBall;
+    public Image parrot;
+    public Image parrotStart;
+    public AudioSource sound;
+    public AudioClip parrotMove;
 
     private Vector2 direction;
     private int minY = 60;
@@ -50,7 +53,7 @@ public class IslandAdventure : MonoBehaviour
             {
                 Win();
             }
-            direction.x -= 4;
+            direction.x -= 5;
             direction.y += 5;
             return direction;
         }
@@ -78,6 +81,9 @@ public class IslandAdventure : MonoBehaviour
     public void ButtonPressed()
     {
         Debug.Log(SetVector());
+        parrotStart.gameObject.SetActive(false);
+        parrot.gameObject.SetActive(true);
+        sound.PlayOneShot(parrotMove);
         SetVector();
     }
 }

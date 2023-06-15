@@ -6,8 +6,10 @@ public class ChestLevel : MonoBehaviour
     public InputField input;
     public Text errorText;
     public Text loseText;
-    public Text winText;
+    public Button final;
     public Button restartButton;
+    public AudioSource sound;
+    public AudioClip chestOpen;
 
     public string SetVector()
     {
@@ -40,7 +42,8 @@ public class ChestLevel : MonoBehaviour
 
     private void Win()
     {
-        winText.gameObject.SetActive(true);
+        sound.PlayOneShot(chestOpen);
+        final.gameObject.SetActive(true);
     }
 
     //здесь start

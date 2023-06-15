@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/5thLevel/FIfthTheory.unity
     guid: 42401c384592f664b89db8f8ffef8522
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: dcc4a28c8f2255242b4ba28462f3e021
   m_configObjects: {}

@@ -11,6 +11,8 @@ public class PirateAttack : MonoBehaviour
     public Button restartButton;
     public Button nextLevel;
     public Image cannonBall;
+    public AudioSource sound;
+    public AudioClip shotSound;
 
     private Vector2 direction;
     private int minY = 60;
@@ -71,6 +73,7 @@ public class PirateAttack : MonoBehaviour
     {
         cannonBall.gameObject.SetActive(true);
         Debug.Log(SetVector());
+        sound.PlayOneShot(shotSound);
         SetVector();
     }
 }
