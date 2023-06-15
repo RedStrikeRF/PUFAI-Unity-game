@@ -63,7 +63,6 @@ public class ShipAdventure : MonoBehaviour
         isDone = true;
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
-        menuControls.button.SetActive(true);
         return isDone;
     }
 

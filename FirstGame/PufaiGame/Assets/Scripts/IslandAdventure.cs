@@ -32,11 +32,11 @@ public class IslandAdventure : MonoBehaviour
         try
         {
             var text = set.text;
-            var input = text.Split(new char[] { '(', ')', ' ', '3', '+' });
+            var input = text.Split(new char[] { '(', ')', ' ', });
             Debug.Log(input);
             direction.x = float.Parse(input[0]) * 0;
             direction.y = float.Parse(input[0]) * -1;
-            if (input[1] != "cos" || input[3] != "isin")
+            if (input[1] != "cos3pi/2+isin3pi/2")
             {
                 errorText.gameObject.SetActive(true);
                 restartButton.gameObject.SetActive(true);

@@ -9,12 +9,6 @@ public class ChestLevel : MonoBehaviour
     public Text winText;
     public Button restartButton;
 
-    void Update()
-    {
-    }
-
-
-
     public string SetVector()
     {
         try
