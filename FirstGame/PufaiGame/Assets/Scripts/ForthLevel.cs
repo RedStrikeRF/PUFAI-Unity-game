@@ -10,6 +10,7 @@ public class ForthLevel : MonoBehaviour
     public Button restartButton;
     public Button nextLevel;
     public Image target1, target2, target3, target4;
+    public Image shadow1, shadow2, shadow3, shadow4;
     public AudioSource sound;
     public AudioClip indians;
 
@@ -74,11 +75,17 @@ public class ForthLevel : MonoBehaviour
 
     private void Win()
     {
+        shadow1.gameObject.SetActive(false);
+        shadow2.gameObject.SetActive(false);
+        shadow3.gameObject.SetActive(false);
+        shadow4.gameObject.SetActive(false);
+
         target1.gameObject.SetActive(true);
         target2.gameObject.SetActive(true);
         target3.gameObject.SetActive(true);
         target4.gameObject.SetActive(true);
         sound.PlayOneShot(indians);
+
         nextLevel.gameObject.SetActive(true);
         winText.gameObject.SetActive(true);
     }

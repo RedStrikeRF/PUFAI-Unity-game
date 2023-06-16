@@ -3,11 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControls : MonoBehaviour
 {
-    public void Update()
-    {
-
-    }
-
     public void Play()
     {
         SceneManager.LoadScene("Levels");

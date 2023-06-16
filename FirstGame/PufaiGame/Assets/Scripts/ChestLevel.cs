@@ -8,8 +8,15 @@ public class ChestLevel : MonoBehaviour
     public Text loseText;
     public Button final;
     public Button restartButton;
+    public Image chest1;
+    public Image chest2;
     public AudioSource sound;
     public AudioClip chestOpen;
+
+    private void Start()
+    {
+        sound = GetComponent<AudioSource>();
+    }
 
     public string SetVector()
     {
@@ -44,6 +51,8 @@ public class ChestLevel : MonoBehaviour
     {
         sound.PlayOneShot(chestOpen);
         final.gameObject.SetActive(true);
+        chest1.gameObject.SetActive(false);
+        chest2.gameObject.SetActive(true);
     }
 
     //здесь start
